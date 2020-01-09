@@ -13,6 +13,7 @@ final class ContentSizedTableView: UITableView {
     override var contentSize:CGSize {
         didSet {
             invalidateIntrinsicContentSize()
+            isScrollEnabled = contentSize.height > bounds.height
         }
     }
 
