@@ -23,6 +23,7 @@ class MyMasterVC: UIViewController {
 
         table.dataSource = self
         table.delegate = self
+        table.rowHeight = 80
                 
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(insertNewObject(_:)))
         navigationItem.rightBarButtonItem = addButton
@@ -80,4 +81,9 @@ extension MyMasterVC: UITableViewDataSource, UITableViewDelegate {
         }
     }
     
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: "showingDetail", sender: self)
+    }
 }
