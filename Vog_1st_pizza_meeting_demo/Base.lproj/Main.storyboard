@@ -120,7 +120,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yCH-fD-Iqj" customClass="ContentSizedTableView" customModule="Vog_1st_pizza_meeting_demo" customModuleProvider="target">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="259" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yCH-fD-Iqj" customClass="ContentSizedTableView" customModule="Vog_1st_pizza_meeting_demo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="122" width="414" height="259"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" red="0.3411764706" green="0.21960784310000001" blue="0.81960784310000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -147,7 +147,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="yCH-fD-Iqj" firstAttribute="height" secondItem="8WY-hZ-ZJ0" secondAttribute="height" multiplier="0.35" id="SaN-4R-fji"/>
+                            <constraint firstItem="yCH-fD-Iqj" firstAttribute="height" relation="lessThanOrEqual" secondItem="8WY-hZ-ZJ0" secondAttribute="height" multiplier="0.35" id="SaN-4R-fji"/>
                             <constraint firstItem="yCH-fD-Iqj" firstAttribute="top" secondItem="8WY-hZ-ZJ0" secondAttribute="top" id="Y6I-Ch-SGT"/>
                             <constraint firstItem="yCH-fD-Iqj" firstAttribute="leading" secondItem="8WY-hZ-ZJ0" secondAttribute="leading" id="Yti-Lz-ZVC"/>
                             <constraint firstItem="yCH-fD-Iqj" firstAttribute="trailing" secondItem="8WY-hZ-ZJ0" secondAttribute="trailing" id="lpV-Ee-baV"/>
