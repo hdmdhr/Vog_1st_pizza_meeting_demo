@@ -19,6 +19,10 @@ class MyMasterVC: UIViewController {
     
     var dates = [NSDate]()
     
+    let siteUrl = "https://www.canadapost.ca"
+    let phoneNumber = "7806167777"
+    let emailAddress = "vog@gmail.com"
+    
     // MARK: - Lifecycles, Setups
     
     override func viewDidLoad() {
@@ -31,8 +35,15 @@ class MyMasterVC: UIViewController {
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(insertNewObject(_:)))
         navigationItem.rightBarButtonItem = addButton
         
-        // FIXME: - set link to TextView attributed string here
-        
+        // set link to TextView attributed string here
+        let string = NSMutableAttributedString(attributedString: tableHeaderTextView.attributedText)
+        if let _ = string.setAsLink(textToFind: "www.canadapost.ca", linkURL: siteUrl),
+            let _ = string.setAsLink(textToFind: "1-833-86BITVO", linkURL: phoneNumber),
+            let _ = string.setAsLink(textToFind: "support@bitvo.com", linkURL: emailAddress) {
+            tableHeaderTextView.attributedText = string
+            tableHeaderTextView.linkTextAttributes = [ .foregroundColor: UIColor.systemBlue ]
+            tableHeaderTextView.delegate = self
+        }
     }
     
     // code to make tableHeaderView, tableFooterView height dynamic
@@ -158,4 +169,27 @@ extension MyMasterVC: MFMailComposeViewControllerDelegate {
             }
         }
     }
+}
+
+// MARK: - intercept default interaction of UITextView
+
+extension MyMasterVC: UITextViewDelegate {
+    
+    func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
+        
+        switch URL.absoluteString {
+        case phoneNumber:
+            makePhoneCall(to: phoneNumber)
+            return false
+            
+        case emailAddress:
+            sendEmail(to: emailAddress)
+            return false
+            
+        default: break
+        }
+        
+        return true
+    }
+    
 }

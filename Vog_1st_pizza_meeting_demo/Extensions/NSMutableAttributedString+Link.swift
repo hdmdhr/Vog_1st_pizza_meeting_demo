@@ -12,6 +12,11 @@ import UIKit
 
 extension NSMutableAttributedString {
 
+    /// Set clickable hyperlink to NSMutableAttributedString
+    /// - parameters:
+    ///   - textToFind: The word you want to add hyperlink to
+    ///   - linkURL: The website url (HTTPS), phone number, email
+    /// - returns: return `nil` if cannot find the `textToFind` in the string, otherwise, return the range of found text
     public func setAsLink(textToFind:String, linkURL:String?=nil, color: UIColor?=nil, font: UIFont?=nil) -> NSRange? {
 
         let foundRange = self.mutableString.range(of: textToFind)
