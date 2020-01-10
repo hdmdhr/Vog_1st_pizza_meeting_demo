@@ -120,13 +120,86 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="259" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yCH-fD-Iqj" customClass="ContentSizedTableView" customModule="Vog_1st_pizza_meeting_demo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="122" width="414" height="259"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="555" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yCH-fD-Iqj" customClass="ContentSizedTableView" customModule="Vog_1st_pizza_meeting_demo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="122" width="414" height="518"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" red="0.3411764706" green="0.21960784310000001" blue="0.81960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="OJV-HF-1D0">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="168"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lgO-WZ-5RS">
+                                            <rect key="frame" x="15" y="15" width="384" height="138"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="To find your nearest Canada Post location, visit ">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="20" name="SFProDisplay-Regular"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content="www.canadapost.ca">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="20" name="SFProDisplay-BoldItalic"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment>
+                                                    <string key="content"> 
+
+If you have questions about this process, please reach out to our customer service team at </string>
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="20" name="SFProDisplay-Regular"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content="1-833-86BITVO">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="20" name="SFProDisplay-BoldItalic"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content=" or ">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="20" name="SFProDisplay-Regular"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content="support@bitvo.com">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="20" name="SFProDisplay-BoldItalic"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content=".">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="20" name="SFProDisplay-Regular"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                    <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </textView>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.84705882349999995" green="0.72161664327443031" blue="0.51593342888841309" alpha="0.88942993719999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="lgO-WZ-5RS" firstAttribute="centerY" secondItem="OJV-HF-1D0" secondAttribute="centerY" id="Mq1-Lk-PcK"/>
+                                        <constraint firstItem="lgO-WZ-5RS" firstAttribute="leading" secondItem="OJV-HF-1D0" secondAttribute="leading" constant="15" id="gEj-cw-vCx"/>
+                                        <constraint firstItem="lgO-WZ-5RS" firstAttribute="top" secondItem="OJV-HF-1D0" secondAttribute="top" constant="15" id="rf8-Fz-SKr"/>
+                                        <constraint firstItem="lgO-WZ-5RS" firstAttribute="centerX" secondItem="OJV-HF-1D0" secondAttribute="centerX" id="wwX-xD-dcm"/>
+                                    </constraints>
+                                </view>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="OQ5-P2-0JO" rowHeight="86" style="IBUITableViewCellStyleDefault" id="Qqd-5d-cPV">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="86"/>
+                                        <rect key="frame" x="0.0" y="196" width="414" height="86"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qqd-5d-cPV" id="3hD-vc-8lm">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="86"/>
@@ -147,7 +220,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="yCH-fD-Iqj" firstAttribute="height" relation="lessThanOrEqual" secondItem="8WY-hZ-ZJ0" secondAttribute="height" multiplier="0.35" id="SaN-4R-fji"/>
+                            <constraint firstItem="yCH-fD-Iqj" firstAttribute="height" relation="lessThanOrEqual" secondItem="8WY-hZ-ZJ0" secondAttribute="height" multiplier="0.7" id="SaN-4R-fji"/>
                             <constraint firstItem="yCH-fD-Iqj" firstAttribute="top" secondItem="8WY-hZ-ZJ0" secondAttribute="top" id="Y6I-Ch-SGT"/>
                             <constraint firstItem="yCH-fD-Iqj" firstAttribute="leading" secondItem="8WY-hZ-ZJ0" secondAttribute="leading" id="Yti-Lz-ZVC"/>
                             <constraint firstItem="yCH-fD-Iqj" firstAttribute="trailing" secondItem="8WY-hZ-ZJ0" secondAttribute="trailing" id="lpV-Ee-baV"/>
