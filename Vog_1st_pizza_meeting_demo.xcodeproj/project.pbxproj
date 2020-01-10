@@ -16,6 +16,7 @@
 		562BA1BF23C7E141006030F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 562BA1BD23C7E141006030F2 /* LaunchScreen.storyboard */; };
 		562BA1C723C7E64A006030F2 /* MyMasterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562BA1C623C7E64A006030F2 /* MyMasterVC.swift */; };
 		562BA1CA23C7E75D006030F2 /* ContentSizeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562BA1C923C7E75D006030F2 /* ContentSizeTable.swift */; };
+		566DF35023C8075B0005BF23 /* NSMutableAttributedString+Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566DF34F23C8075B0005BF23 /* NSMutableAttributedString+Link.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		562BA1C023C7E141006030F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		562BA1C623C7E64A006030F2 /* MyMasterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMasterVC.swift; sourceTree = "<group>"; };
 		562BA1C923C7E75D006030F2 /* ContentSizeTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentSizeTable.swift; sourceTree = "<group>"; };
+		566DF34F23C8075B0005BF23 /* NSMutableAttributedString+Link.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Link.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				562BA1C923C7E75D006030F2 /* ContentSizeTable.swift */,
+				566DF34F23C8075B0005BF23 /* NSMutableAttributedString+Link.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 				562BA1B323C7E13F006030F2 /* SceneDelegate.swift in Sources */,
 				562BA1B523C7E13F006030F2 /* MasterViewController.swift in Sources */,
 				562BA1B723C7E13F006030F2 /* DetailViewController.swift in Sources */,
+				566DF35023C8075B0005BF23 /* NSMutableAttributedString+Link.swift in Sources */,
 				562BA1CA23C7E75D006030F2 /* ContentSizeTable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

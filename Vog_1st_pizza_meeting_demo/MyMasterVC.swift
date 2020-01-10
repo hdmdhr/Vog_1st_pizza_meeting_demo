@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import MessageUI
+
 
 class MyMasterVC: UIViewController {
     
     // MARK: - IBOutlets, Props
     
     @IBOutlet weak var table: ContentSizedTableView!
+    @IBOutlet weak var tableHeaderTextView: UITextView!
     
     var dates = [NSDate]()
     
@@ -27,6 +30,8 @@ class MyMasterVC: UIViewController {
                 
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(insertNewObject(_:)))
         navigationItem.rightBarButtonItem = addButton
+        
+        // FIXME: - set link to TextView attributed string here
         
     }
     
@@ -105,5 +110,52 @@ extension MyMasterVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         performSegue(withIdentifier: "showingDetail", sender: self)
+    }
+}
+
+// MARK: - Email, Phone call
+
+extension MyMasterVC: MFMailComposeViewControllerDelegate {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    func sendEmail(to address: String, withSubject subject: String="Bug Report", withMessage message: String="Hello Developer, ") {
+        let mailComposerVC = MFMailComposeViewController()
+        mailComposerVC.mailComposeDelegate = self
+        mailComposerVC.setToRecipients([address])
+        mailComposerVC.setSubject(subject)
+        mailComposerVC.setMessageBody(message, isHTML: false)
+        
+        if MFMailComposeViewController.canSendMail() {
+            self.present(mailComposerVC, animated: true, completion: nil)
+        } else {
+            showMailError()
+        }
+    }
+    
+    
+    func showMailError() {
+        let sendMailErrorAlert = UIAlertController(title: "Could not send email", message: "Please check your email setting", preferredStyle: .alert)
+        let dismiss = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        sendMailErrorAlert.addAction(dismiss)
+        self.present(sendMailErrorAlert, animated: true, completion: nil)
+    }
+    
+    
+    func makePhoneCall(to phoneNumber:String) {
+        if let phoneCallURL = URL(string: "telprompt://\(phoneNumber)") {
+            
+            let application:UIApplication = UIApplication.shared
+            if (application.canOpenURL(phoneCallURL)) {
+                if #available(iOS 10.0, *) {
+                    application.open(phoneCallURL, options: [:], completionHandler: nil)
+                } else {
+                    // Fallback on earlier versions
+                    application.openURL(phoneCallURL as URL)
+                }
+            }
+        }
     }
 }
