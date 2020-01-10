@@ -125,11 +125,11 @@
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" red="0.3411764706" green="0.21960784310000001" blue="0.81960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="OJV-HF-1D0">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="168"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="222"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lgO-WZ-5RS">
-                                            <rect key="frame" x="15" y="15" width="384" height="138"/>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lgO-WZ-5RS">
+                                            <rect key="frame" x="15" y="15" width="384" height="192"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <attributedString key="attributedText">
                                                 <fragment content="To find your nearest Canada Post location, visit ">
@@ -194,12 +194,58 @@ If you have questions about this process, please reach out to our customer servi
                                         <constraint firstItem="lgO-WZ-5RS" firstAttribute="centerY" secondItem="OJV-HF-1D0" secondAttribute="centerY" id="Mq1-Lk-PcK"/>
                                         <constraint firstItem="lgO-WZ-5RS" firstAttribute="leading" secondItem="OJV-HF-1D0" secondAttribute="leading" constant="15" id="gEj-cw-vCx"/>
                                         <constraint firstItem="lgO-WZ-5RS" firstAttribute="top" secondItem="OJV-HF-1D0" secondAttribute="top" constant="15" id="rf8-Fz-SKr"/>
-                                        <constraint firstItem="lgO-WZ-5RS" firstAttribute="centerX" secondItem="OJV-HF-1D0" secondAttribute="centerX" id="wwX-xD-dcm"/>
+                                        <constraint firstItem="lgO-WZ-5RS" firstAttribute="centerX" secondItem="OJV-HF-1D0" secondAttribute="centerX" priority="999" id="wwX-xD-dcm"/>
+                                    </constraints>
+                                </view>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="jST-Eo-Bif">
+                                    <rect key="frame" x="0.0" y="364" width="414" height="146"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NKi-AF-wJ6">
+                                            <rect key="frame" x="15" y="15" width="384" height="116"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="To find your nearest Canada Post location, visit ">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="20" name="SFProDisplay-Regular"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content="www.canadapost.ca">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="20" name="SFProDisplay-BoldItalic"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content=" ">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="20" name="SFProDisplay-Regular"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                    <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </textView>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.84705882349999995" green="0.72161664329999997" blue="0.51593342890000005" alpha="0.88942993719999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="NKi-AF-wJ6" firstAttribute="top" secondItem="jST-Eo-Bif" secondAttribute="top" constant="15" id="eje-OM-vhD"/>
+                                        <constraint firstItem="NKi-AF-wJ6" firstAttribute="leading" secondItem="jST-Eo-Bif" secondAttribute="leading" constant="15" id="otx-qd-FU7"/>
+                                        <constraint firstItem="NKi-AF-wJ6" firstAttribute="centerY" secondItem="jST-Eo-Bif" secondAttribute="centerY" id="pRg-RP-tDr"/>
+                                        <constraint firstItem="NKi-AF-wJ6" firstAttribute="centerX" secondItem="jST-Eo-Bif" secondAttribute="centerX" priority="999" id="xPD-SO-tcc"/>
                                     </constraints>
                                 </view>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="OQ5-P2-0JO" rowHeight="86" style="IBUITableViewCellStyleDefault" id="Qqd-5d-cPV">
-                                        <rect key="frame" x="0.0" y="196" width="414" height="86"/>
+                                        <rect key="frame" x="0.0" y="250" width="414" height="86"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qqd-5d-cPV" id="3hD-vc-8lm">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="86"/>

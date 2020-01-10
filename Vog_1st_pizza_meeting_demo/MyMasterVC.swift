@@ -29,6 +29,26 @@ class MyMasterVC: UIViewController {
         navigationItem.rightBarButtonItem = addButton
         
     }
+    
+    // code to make tableHeaderView, tableFooterView height dynamic
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        guard let headerView = table.tableHeaderView else { return }
+        let minSize = headerView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
+        if headerView.frame.size.height != minSize.height {
+            headerView.frame.size.height = minSize.height
+            table.tableHeaderView = headerView
+        }
+        
+        guard let footerView = table.tableFooterView else { return }
+        let minFooterSize = footerView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
+        if footerView.frame.height != minFooterSize.height {
+            footerView.frame.size.height = minFooterSize.height
+            table.tableFooterView = footerView
+        }
+    }
+    
 
     @objc func insertNewObject(_ sender: Any) {
         dates.insert(NSDate(), at: 0)
